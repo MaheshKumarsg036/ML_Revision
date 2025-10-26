@@ -98,7 +98,7 @@ def missing_data_handling():
     print(imputed_median)
     
     # Most frequent imputation
-    data_categorical = np.array([['A'], ['B'], [np.nan], ['A'], ['B']])
+    data_categorical = np.array([['A'], ['B'], [None], ['A'], ['B']], dtype=object)
     imputer_freq = SimpleImputer(strategy='most_frequent')
     imputed_freq = imputer_freq.fit_transform(data_categorical)
     print("\nMost Frequent Imputation (categorical):")
